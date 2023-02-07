@@ -1,0 +1,132 @@
+html, body{
+	overflow-x: hidden;
+}
+
+nav.navbar{
+	height: 80px;
+	position: fixed;
+	top: 0;
+	z-index: 5;
+	width: 100vw;
+}
+.nav-link-askara{
+	letter-spacing: 1.5px;
+}
+.nav-link-askara.active{
+	color: #fff;
+	font-weight: 700;
+}
+.nav-link-askara:hover{
+	color: #fff;
+  background-color: #0a58ca;
+  border-color: #0a58ca;
+}
+#navbarAskara, #navbarAskara2{
+	width: 120px;
+}
+.text-askara{
+	color: #333333 !important;
+}
+.border-askara{
+	border-color: #333333 !important;
+}
+.bg-askara{
+	opacity: 1;
+	background-color: #333333 !important;
+}
+.bg-askara2{
+	background-color: #e2e2e2 !important;
+}
+.btn-askara{
+	color: #fff;
+	background-color: #333333;
+	border-color: #333333;
+}
+.btn-askara.disabled, .btn-askara:disabled {
+  color: #fff;
+	background-color: #333333;
+	border-color: #333333;
+}
+.btn-askara:hover {
+	color: #fff;
+	background-color: #333333;
+	border-color: #333333;
+}
+.splide__slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#splide-client{
+	padding: 2rem 3rem 2.5rem;
+	background-color: #DEDEDE;
+}
+#splide-client .splide__arrow{
+	opacity: 1;
+	background: transparent;
+	border-radius: none;
+}
+#footer{
+	background-color: #333333;
+}
+#footer h5{
+	font-weight: 700;
+	font-size: 15px;
+	line-height: 20px;
+}
+#footer p{
+	font-weight: 300;
+	font-size: 14px;
+	line-height: 20px;
+}
+#footLogo{
+	height: 65px;
+	width: 65px
+}
+
+#changeLang .dropdown-menu{
+	min-width: 5rem !important;
+}
+#changeLang .dropdown-item:hover, .dropdown-item:hover {
+  color: var(--bs-dropdown-link-active-color);
+  text-decoration: none;
+  background-color: var(--bs-dropdown-link-active-bg);
+}
+.js-highlight{
+	transition: color .5s linear;
+}
+.js-highlight.highlighted{
+	color: #000 !important;
+}
+/* .splide__slide.is-active{
+	opacity: .5;
+} */
+
+@media (min-width: 576px) {
+}
+@media (min-width: 768px) {
+	nav.navbar{
+		position: absolute;
+	}
+  .nav-link-askara:hover {
+    background-color: transparent;
+    border-color: transparent;
+  }
+}
+@media (min-width: 992px) {
+	#footLogo{
+		height: 85px;
+		width: 85px
+	}
+}
+@media (min-width: 1200px) {
+	#footLogo{
+		height: 100px;
+		width: 100px
+	}
+}
+@media (min-width: 1400px) {
+}
+
+@media (min-width: 2400px) {
+}

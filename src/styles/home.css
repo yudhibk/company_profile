@@ -1,0 +1,210 @@
+#imageAskara{
+	position: fixed;
+	background-image: url('../images/gedung_askara/optimized.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+  background-position: 30% 0px;
+  height: 100vh;
+	margin-top: 80px;
+	width: 100vw;
+}
+#imageAskara-zone{
+	height: 100vh;
+	padding-top: 80px;
+}
+
+#summaryComp{
+	z-index: 0;
+}
+
+#summaryComp > div{
+	overflow: hidden;
+}
+
+#blokBiru1{
+	background-color: #6E91EB;
+	border-radius: 0px 12px 0px 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 0;
+	top: 50%;
+	left: 0;
+}
+
+#blokBiru2{
+	background-color: #6E91EB;
+	width: 100%;
+	height: 100%;
+	z-index: 0;
+}
+
+#spaceSumDiv1{
+	padding: 3rem 1rem;
+	z-index: 1;
+	overflow: hidden;
+}
+#spaceSumDiv2{
+	padding: 0;
+	z-index: 0;
+}
+
+#spaceSum {
+	height: 355px;
+	box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.25);
+	z-index: 2;
+}
+
+#spaceSumStory{
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 23px;
+}
+#spaceSumTitle{
+	font-weight: 700;
+	font-size: 32px;
+	line-height: 39px;
+}
+#spaceSumWord{
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 22px;
+	word-break: break-all;
+}
+
+#S4Comp{
+	background: #BFBFBF;
+	border-radius: 6px 0px 0px 6px;
+	padding-bottom: 6rem;
+	z-index: 0;
+}
+
+#blokAbu {
+	background: #BFBFBF;
+	box-shadow: 12px 5px 0px #FFFFFF;
+	border-radius: 6px 0px 0px 6px;
+	z-index: 0;
+	width: 100%;
+	height: 100%;
+}
+
+#blokAbu2{
+	background: #BFBFBF;
+	z-index: 1;
+	width: calc(100% + 12px);
+	height: 100%;
+	top: 0;
+	left: 12px;
+}
+
+#blokPutih{
+	background: #FFF;
+	border-radius: 6px 0px 0px 6px;
+	z-index: 0;
+	width: 100%;
+	height: 100%;
+	top: 5px;
+	left: 12px;
+}
+
+#S4Symbol{
+	font-weight: 800;
+	font-size: 250px;
+	line-height: 305px;
+	bottom: -65px;
+	right: -50px;
+	width: auto;
+	display: inline-block;
+	max-width: none;
+	z-index: 1;
+}
+.S4CompTitle{
+	font-weight: 700;
+	font-size: 28px;
+	line-height: 34px;
+}
+
+.S4CompText{
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 22px;
+}
+
+#sumClientDiv{
+	background: #6B6B6B;
+}
+@media (min-width: 576px) {
+	#spaceSumDiv1{
+		padding: 3rem 0 2rem 0;
+	}
+	#spaceSumDiv2{
+		padding: 0 0 3rem 0;
+		max-width: calc(540px + 4rem);
+	}
+	#S4Comp{
+		padding-bottom: 6rem !important;
+	}
+	#blokAbu {
+		left: 50%;
+		margin-top: -3rem;
+	}
+}
+@media (min-width: 768px) {
+	#imageAskara{
+		margin-top: 0;
+		background-size: 2400px auto;
+		background-position: -520px -150px;
+	}
+	#spaceSumDiv2{
+		max-width: calc(720px + 2rem);
+	}
+}
+@media (min-width: 992px) {
+	#spaceSum{
+		width: 660px !important;
+	}
+	#blokBiru1{
+		width: 90%;
+	}
+	#blokBiru2{
+		width: 90%;
+	}
+	#spaceSumDiv2{
+		max-width: calc(960px + 2rem);
+	}
+	#S4Comp{
+		padding-bottom: 1rem !important;
+		padding-right: 8rem !important;
+	}
+	#S4Symbol{
+		right: -8rem;
+	}
+}
+@media (min-width: 1200px) {
+	#spaceSumDiv2{
+		max-width: calc(1140px + 2rem);
+	}
+	#S4Symbol{
+		right: -9rem;
+	}
+}
+@media (min-width: 1400px) {
+	#spaceSumDiv2{
+		max-width: calc(1320px + 2rem);
+	}
+	#S4Symbol{
+		right: -9.5rem;
+	}
+	#imageAskara{
+		margin-top: 0;
+		background-size: 2400px auto;
+		background-position: -120px -150px;
+	}
+}
+
+@media (min-width: 2400px) {
+	#imageAskara{
+		margin-top: 0;
+		background-size: cover;
+		background-position: center -150px;
+	}
+}

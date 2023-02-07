@@ -1,0 +1,219 @@
+#combineFoto{
+    height: 205px;
+    padding-top: 80px;
+    display: flex;
+    width: 120%;
+    margin-left: -10%;
+    position: relative;
+}
+#combineFoto1,
+#combineFoto2,
+#combineFoto3,
+#combineFoto4,
+#combineFoto5,
+#combineFoto6{
+    flex:1;
+    height: 100%;
+    -webkit-transform: skew(-20deg);
+    -moz-transform: skew(-20deg);
+    transform: skew(-20deg);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#combineFotoImg1,
+#combineFotoImg2,
+#combineFotoImg3,
+#combineFotoImg4,
+#combineFotoImg5,
+#combineFotoImg6{
+    height: auto;
+    width: 576px;
+    position: absolute;
+    -webkit-transform: skew(20deg);
+    -moz-transform: skew(20deg);
+}
+
+#titleProduct{
+    top: calc(50% + 80px);
+    left: 50%;
+    transform: translate(-50%, calc(-50% - 40px));
+    z-index: 2;
+    color: white;
+    background-color: rgba(0, 0, 0, .6);
+    backdrop-filter: blur(5px);
+    font-size: 2.5em;
+    letter-spacing: 3px;
+}
+
+#titleTopProduct {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 34px;
+}
+
+.topProdItem > div{
+    overflow: hidden;
+}
+
+#topProdContain .splide__slide .topProdImage{
+  height: 115px;
+  transition: all .15s linear;
+}
+
+#topProdContain .splide__slide:hover .topProdImage{
+  transform: scale(0.9,0.9);
+}
+
+.topProdh3{
+    word-break: break-all;
+}
+#topProdContain, #topProdAbu, #topProdContainer{
+    background-color: #333333;
+}
+#topProdAbu{
+    z-index: inherit;
+    left: 50%;
+}
+#topProdContainer{
+    overflow: hidden;
+}
+#topProdContain{
+    z-index: 1;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+#topProdContain .splide__arrow{
+    background: transparent;
+    opacity: 1;
+}
+#topProdContain .splide__arrow--prev{
+    left: 0;
+}
+#topProdContain .splide__arrow--next{
+    right: 0;
+}
+#topProdContain .splide__arrow svg {
+    fill: #FFF;
+    height: 1.5em;
+    width: 1.5em;
+}
+#topProdContain .splide__slide{
+  cursor: pointer;
+}
+.topProdh3{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+}
+#splide-top-product{
+    padding: 0;
+    background-color: inherit;
+}
+.topProdSlide{
+    overflow: hidden;
+}
+#categoryContain{
+  gap: 1rem;
+}
+.categoryList{
+  max-width: 320px;
+  height: 210px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+.categoryList:hover{
+  transform: translate(-4px, -4px);
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.8);
+}
+.categoryList .categoryListImg{
+  z-index: 1;
+  opacity: 1;
+}
+#categoryAbu, #categoryContain{
+  background-color: #BFBFBF;
+}
+#categoryAbu{
+  right: 50%;
+}
+.categoryListTitle{
+  z-index: 2;
+  background-color: rgba(255, 255, 255, .4);
+  backdrop-filter: blur(3px);
+  user-select: none;
+}
+@media (min-width: 576px) {
+    #combineFoto{
+        height: 370px;
+        width: 140%;
+        margin-left: -20%;
+    }
+    #combineFotoImg1,
+    #combineFotoImg2,
+    #combineFotoImg3,
+    #combineFotoImg4,
+    #combineFotoImg5,
+    #combineFotoImg6{
+        height: auto;
+        width: 768px;
+    }
+    #titleProduct{
+        font-size: 4em;
+    }
+    #topProdContain{
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+    #topProdContain .splide__arrow--prev{
+        left: .5rem;
+    }
+    #topProdContain .splide__arrow--next{
+        right: .5rem;
+    }
+}
+@media (min-width: 768px) {
+}
+@media (min-width: 992px) {
+    #combineFoto{
+        height: 500px;
+        width: 140%;
+        margin-left: -20%;
+    }
+    #combineFotoImg1,
+    #combineFotoImg2,
+    #combineFotoImg3,
+    #combineFotoImg4,
+    #combineFotoImg5,
+    #combineFotoImg6{
+        height: auto;
+        width: 992px;
+    }
+    #titleProduct{
+        font-size: 6em;
+    }
+    #categoryContain{
+      max-width: 1060px;
+    }
+
+    .categoryList{
+      max-width: 490px;
+      height: 320px;
+    }
+}
+@media (min-width: 1200px) {
+  #topProdContain{
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+  }
+  #topProdContain .splide__arrow--prev{
+    left: .75rem;
+  }
+  #topProdContain .splide__arrow--next{
+    right: .75rem;
+  }
+}
+@media (min-width: 1400px) {
+}
+@media (min-width: 2400px) {}
