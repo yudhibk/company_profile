@@ -5,87 +5,41 @@ import '../../../styles/product.css';
 import dummy from '../../../images/gedung_askara/optimized.jpg';
 import dummy2 from '../../../images/dummy.jpg';
 
-// Import splide
-import '@splidejs/splide/css';
-import Splide from '@splidejs/splide';
-
 import MainProductShared from './compo-shared/main-product';
+import TopProductShared from './compo-shared/top-product';
 
 const Product = {
   async render() {
-    const MainProduct = await MainProductShared.render("");
+    const MainProduct = await MainProductShared.render('');
+    const TopProduct = await TopProductShared.render();
     return `
-    <div id="combineFoto">
-      <h2 class="position-absolute d-inline-block px-5 py-3 font-lora rounded" id="titleProduct">Product</h2>
-      <div id="combineFoto1" class="p-0">
+    <div id="combineFoto" class="position-relative row m-0">
+      <div class="w-100 position-absolute d-flex justify-content-start align-items-center" id="titleProductDiv">
+        <div class="d-inline-block position-relative">
+          <h2 class="d-inline-block font-lora position-relative m-0 fw-bold" id="titleProduct">OUR PRODUCT</h2>
+          <hr class="mb-0 mt-2">
+        </div>
+      </div>
+      <div id="combineFoto1" class="p-0 col-3 h-100">
         <img src="" id="combineFotoImg1">
       </div>
-      <div id="combineFoto2" class="p-0">
+      <div id="combineFoto2" class="p-0 col-3 h-100">
         <img src="" id="combineFotoImg2">
       </div>
-      <div id="combineFoto3" class="p-0">
+      <div id="combineFoto3" class="p-0 col-3 h-100">
         <img src="" id="combineFotoImg3">
       </div>
-      <div id="combineFoto4" class="p-0">
+      <div id="combineFoto4" class="p-0 col-3 h-100">
         <img src="" id="combineFotoImg4">
-      </div>
-      <div id="combineFoto5" class="p-0">
-        <img src="" id="combineFotoImg5">
-      </div>
-      <div id="combineFoto6" class="p-0">
-        <img src="" id="combineFotoImg6">
       </div>
     </div>
     ${MainProduct}
-    <h2 class="text-center py-5 mt-2 fw-bold text-secondary" id="titleTopProduct">OUR Top Product</h2>
-    <div class="w-100 position-relative mb-3">
-      <div class="position-absolute w-100 h-100" id="topProdAbu"></div>
-      <div class="container rounded position-relative px-0 px-lg-5" id="topProdContainer">
-        <section class="splide py-4" aria-labelledby="carousel-heading" id="topProdContain">
-          <div class="splide__track">
-            <ul class="splide__list">
-              <li class="splide__slide">
-                <div class="bg-white rounded topProdSlide">
-                  <img src="" alt="barang" class="topProdImage">
-                  <h3 class="m-0 text-center topProdh3 px-1 pb-3 pt-4">{nama_barang}</h3>
-                </div>
-              </li>
-              <li class="splide__slide">
-                <div class="bg-white rounded topProdSlide">
-                  <img src="" alt="barang" class="topProdImage">
-                  <h3 class="m-0 text-center topProdh3 px-1 pb-3 pt-4">{nama_barang}</h3>
-                </div>
-              </li>
-              <li class="splide__slide">
-                <div class="bg-white rounded topProdSlide">
-                  <img src="" alt="barang" class="topProdImage">
-                  <h3 class="m-0 text-center topProdh3 px-1 pb-3 pt-4">{nama_barang}</h3>
-                </div>
-              </li>
-              <li class="splide__slide">
-                <div class="bg-white rounded topProdSlide">
-                  <img src="" alt="barang" class="topProdImage">
-                  <h3 class="m-0 text-center topProdh3 px-1 pb-3 pt-4">{nama_barang}</h3>
-                </div>
-              </li>
-              <li class="splide__slide">
-                <div class="bg-white rounded topProdSlide">
-                  <img src="" alt="barang" class="topProdImage">
-                  <h3 class="m-0 text-center topProdh3 px-1 pb-3 pt-4">{nama_barang}</h3>
-                </div>
-              </li>
-              <li class="splide__slide">
-                <div class="bg-white rounded topProdSlide">
-                  <img src="" alt="barang" class="topProdImage">
-                  <h3 class="m-0 text-center topProdh3 px-1 pb-3 pt-4">{nama_barang}</h3>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </section>
-      </div>
+    <div class="w-100 bg-white pt-2 pb-3 js-scroll">
+      ${TopProduct}
     </div>
-    <h2 class="text-center py-5 mt-2 fw-bold text-secondary" id="titleTopProduct">Category Product</h2>
+    <div class="js-scroll">
+      <h2 class="text-center py-5 mt-2 fw-bold text-secondary js-highlight" id="titleProdfam">Category Product</h2>
+    </div>
     <div class="w-100 position-relative mb-5">
       <div class="position-absolute w-100 h-100" id="categoryAbu"></div>
       <div class="container d-flex flex-wrap justify-content-center align-items-center rounded position-relative p-4" id="categoryContain">
@@ -113,54 +67,19 @@ const Product = {
   async afterRender() {
 
     await MainProductShared.afterRender();
+    await TopProductShared.afterRender();
+
+    document.querySelector('#SeeMoreProd').style.display = 'none';
 
     let combineFotoImg = [];
-    for (let i = 1; i < 7; i++) {
+    for (let i = 1; i < 5; i++) {
       combineFotoImg[i] = document.querySelector(`#combineFotoImg${i}`);
       combineFotoImg[i].src = dummy;
     }
-    const slide00 = document.querySelectorAll('.topProdImage');
-    slide00.forEach(function(elem) {
-      elem.src = dummy2;
-    });
     const categoryListImg = document.querySelectorAll('.categoryListImg');
     categoryListImg.forEach(function(elem) {
       elem.src = dummy2;
     });
-    new Splide( '#topProdContain' ).mount();
-    const splideElem = new Splide( '#topProdContain', {
-      type: 'loop',
-      focus: 1,
-      rewind: false,
-      updateOnMove: true,
-      pagination: false,
-      width: '100%',
-      gap: '.5rem',
-      waitForTransition: true,
-      speed: 500,
-      perPage: 2,
-      perMove: 1,
-      cover: true,
-      mediaQuery: 'min',
-      breakpoints: {
-        576: {
-          perPage: 3,
-        },
-        768: {
-          perPage: 4,
-        },
-        992: {
-          perPage: 5,
-        },
-        1200: {
-          gap: '1.5rem',
-        },
-        1400: {
-          perPage: 6,
-        }
-      },
-    } );
-    splideElem.mount();
   },
 };
  

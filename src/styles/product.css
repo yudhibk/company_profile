@@ -1,118 +1,45 @@
 #combineFoto{
-    height: 205px;
-    padding-top: 80px;
-    display: flex;
-    width: 120%;
-    margin-left: -10%;
-    position: relative;
+  height: 35vh;
+  min-height: 205px;
+  user-select: none;
+  overflow: hidden;
 }
 #combineFoto1,
 #combineFoto2,
 #combineFoto3,
-#combineFoto4,
-#combineFoto5,
-#combineFoto6{
-    flex:1;
-    height: 100%;
-    -webkit-transform: skew(-20deg);
-    -moz-transform: skew(-20deg);
-    transform: skew(-20deg);
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#combineFoto4{
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 #combineFotoImg1,
 #combineFotoImg2,
 #combineFotoImg3,
-#combineFotoImg4,
-#combineFotoImg5,
-#combineFotoImg6{
-    height: auto;
-    width: 576px;
-    position: absolute;
-    -webkit-transform: skew(20deg);
-    -moz-transform: skew(20deg);
+#combineFotoImg4{
+  height: 100%;
+  width: 100%;
 }
-
+#titleProductDiv{
+  height: 100%;
+  color: #FFF;
+  background-color: rgba(26, 26, 26, .65);
+  backdrop-filter: blur(1px);
+  z-index: 1;
+  padding-left: 10%;
+}
+#titleProductDiv hr{
+  border-top-width: 1px;
+  opacity: .9;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, .5);
+  width: 75%;
+}
 #titleProduct{
-    top: calc(50% + 80px);
-    left: 50%;
-    transform: translate(-50%, calc(-50% - 40px));
-    z-index: 2;
-    color: white;
-    background-color: rgba(0, 0, 0, .6);
-    backdrop-filter: blur(5px);
-    font-size: 2.5em;
-    letter-spacing: 3px;
-}
-
-#titleTopProduct {
-    font-weight: 700;
-    font-size: 28px;
-    line-height: 34px;
-}
-
-.topProdItem > div{
-    overflow: hidden;
-}
-
-#topProdContain .splide__slide .topProdImage{
-  height: 115px;
-  transition: all .15s linear;
-}
-
-#topProdContain .splide__slide:hover .topProdImage{
-  transform: scale(0.9,0.9);
-}
-
-.topProdh3{
-    word-break: break-all;
-}
-#topProdContain, #topProdAbu, #topProdContainer{
-    background-color: #333333;
-}
-#topProdAbu{
-    z-index: inherit;
-    left: 50%;
-}
-#topProdContainer{
-    overflow: hidden;
-}
-#topProdContain{
-    z-index: 1;
-    padding-left: 2rem;
-    padding-right: 2rem;
-}
-#topProdContain .splide__arrow{
-    background: transparent;
-    opacity: 1;
-}
-#topProdContain .splide__arrow--prev{
-    left: 0;
-}
-#topProdContain .splide__arrow--next{
-    right: 0;
-}
-#topProdContain .splide__arrow svg {
-    fill: #FFF;
-    height: 1.5em;
-    width: 1.5em;
-}
-#topProdContain .splide__slide{
-  cursor: pointer;
-}
-.topProdh3{
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 22px;
-}
-#splide-top-product{
-    padding: 0;
-    background-color: inherit;
-}
-.topProdSlide{
-    overflow: hidden;
+  font-size: 1.75em;
+  letter-spacing: 3px;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, .5);
+  opacity: .9;
 }
 #categoryContain{
   gap: 1rem;
@@ -145,74 +72,29 @@
   user-select: none;
 }
 @media (min-width: 576px) {
-    #combineFoto{
-        height: 370px;
-        width: 140%;
-        margin-left: -20%;
-    }
-    #combineFotoImg1,
-    #combineFotoImg2,
-    #combineFotoImg3,
-    #combineFotoImg4,
-    #combineFotoImg5,
-    #combineFotoImg6{
-        height: auto;
-        width: 768px;
-    }
-    #titleProduct{
-        font-size: 4em;
-    }
-    #topProdContain{
-        padding-left: 2.5rem;
-        padding-right: 2.5rem;
-    }
-    #topProdContain .splide__arrow--prev{
-        left: .5rem;
-    }
-    #topProdContain .splide__arrow--next{
-        right: .5rem;
-    }
+  #combineFoto{
+    height: 220px;
+    min-height: none;
+  }
+  #titleProduct{
+    font-size: 3em;
+  }
 }
 @media (min-width: 768px) {
 }
 @media (min-width: 992px) {
     #combineFoto{
-        height: 500px;
-        width: 140%;
-        margin-left: -20%;
-    }
-    #combineFotoImg1,
-    #combineFotoImg2,
-    #combineFotoImg3,
-    #combineFotoImg4,
-    #combineFotoImg5,
-    #combineFotoImg6{
-        height: auto;
-        width: 992px;
-    }
-    #titleProduct{
-        font-size: 6em;
+      height: 320px;
     }
     #categoryContain{
       max-width: 1060px;
     }
-
     .categoryList{
       max-width: 490px;
       height: 320px;
     }
 }
 @media (min-width: 1200px) {
-  #topProdContain{
-    padding-left: 3.5rem;
-    padding-right: 3.5rem;
-  }
-  #topProdContain .splide__arrow--prev{
-    left: .75rem;
-  }
-  #topProdContain .splide__arrow--next{
-    right: .75rem;
-  }
 }
 @media (min-width: 1400px) {
 }

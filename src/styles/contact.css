@@ -1,0 +1,106 @@
+#contactHead{
+  height: 35vh;
+  min-height: 205px;
+  user-select: none;
+  overflow: hidden;
+}
+
+#contactHeadImg{
+  width: 150%;
+  height: 100%;
+  margin: auto;
+}
+
+#contactHeadDiv{
+  height: 100%;
+  color: #FFF;
+  background-color: rgba(26, 26, 26, .65);
+  backdrop-filter: blur(1px);
+  z-index: 1;
+  padding-left: 10%;
+}
+
+#contactHeadDiv hr{
+  border-top-width: 1px;
+  opacity: .9;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, .5);
+  width: 75%;
+}
+
+#contactHeadWord{
+  font-size: 1.75em;
+  letter-spacing: 3px;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, .5);
+  opacity: .9;
+}
+#mapDiv{
+  width: 100%;
+  height: 420px;
+  /* filter: drop-shadow(2px 4px 8px rgba(0, 0, 0, 0.25)); */
+  overflow: hidden;
+}
+.garisHr{
+  background-color: var(--bs-dark);
+  height: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#contactMainTitle{
+  z-index: 1;
+}
+#telLink *,
+#smsLink *,
+#mailLink *,
+#waLink *,
+#skypeLink *{
+  text-decoration: none;
+}
+#telLink,
+#smsLink,
+#mailLink,
+#waLink,
+#skypeLink{
+  text-decoration: none;
+}
+.circle-icon{
+  width: 32px;
+  height: 32px;
+}
+.contactMainDiv{
+  transform: translateX(15px) scale(.8);
+  opacity: 0;
+  transition: all .75s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.contactMainDiv.scrolled{
+  transform: translateX(0) scale(1);
+  opacity: 1;
+}
+@media (min-width: 576px) {
+  #contactHead{
+    height: 220px;
+    min-height: none;
+  }
+  #contactHeadWord{
+    font-size: 3em;
+  }
+  #contactHeadImg{
+    width: 200%;
+  }
+}
+@media (min-width: 768px) {
+  #contactHeadImg{
+    width: auto;
+  }
+}
+@media (min-width: 992px) {
+  #contactHead{
+    height: 320px;
+  }
+}
+@media (min-width: 1200px) {}
+@media (min-width: 1400px) {}
+@media (min-width: 2400px) {
+  #contactHeadImg{
+    width: 100%;
+  }
+}
